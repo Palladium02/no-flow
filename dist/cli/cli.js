@@ -10,6 +10,7 @@ const child_process_1 = require("child_process");
 (function () {
     let [, , ...args] = process.argv;
     let filepath = (args.includes("-D")) ? path_1.default.resolve(`${__dirname}`, "..", "..", `test`) : path_1.default.resolve(`${__dirname}`, "..", "..", "..", "test");
+    console.log(filepath);
     try {
         let testFiles = fs_1.default.readdirSync(`${filepath}`);
         if (args.includes("--js")) {
