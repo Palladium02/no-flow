@@ -6,6 +6,7 @@ import { exec } from 'child_process';
 (function () {
   let [,,...args] = process.argv;
   let filepath = (args.includes("-D")) ? path.resolve(`${__dirname}`, "..", "..", `test`) : path.resolve(`${__dirname}`, "..", "..", "..", "test");
+  console.log(filepath);
   try {
     let testFiles: string[] = fs.readdirSync(`${filepath}`);
     if(args.includes("--js")) {
