@@ -5,9 +5,7 @@
   "author": "Sean Meyer",
   "license": "MIT",
   "private": true,
-  "bin": {
-    "no-flow": "node ./dist/cli/cli.js"
-  },
+  "bin": "./dist/cli/cli.js",
   "scripts": {
     "test": "ts-node ./test/index.test.ts",
     "test:cli": "node ./dist/cli/cli.js  --ts",
