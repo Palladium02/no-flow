@@ -15,8 +15,9 @@ const child_process_1 = require("child_process");
         if (args.includes("--js")) {
             testFiles.forEach((testFile) => {
                 if (!testFile.endsWith("ts") && testFile.endsWith("js")) {
+                    console.log("--here");
                     (0, child_process_1.exec)(`node ${filepath}\\${testFile}`, (error, stdout, stderr) => {
-                        console.log(testFile, " ", stdout);
+                        console.log(testFile, " ", stdout, stderr);
                     });
                 }
             });

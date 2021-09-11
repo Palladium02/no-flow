@@ -11,9 +11,10 @@ import { exec } from 'child_process';
     if(args.includes("--js")) {
       testFiles.forEach((testFile) => {
         if(!testFile.endsWith("ts") && testFile.endsWith("js")) {
+          console.log("--here");
           exec(`node ${filepath}\\${testFile}`, (error, stdout, stderr) => {
-            console.log(testFile, " ",stdout);
-          } );
+            console.log(testFile, " ", stdout, stderr);
+          });
         }
       });
       // execute test as js
