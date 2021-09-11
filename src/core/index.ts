@@ -1,11 +1,13 @@
+import { pass, fail } from './colors';
+
 function test(description: string, fn: () => boolean) {
   let now = Date.now();
   let result = fn();
   let delta = Date.now() - now;
   if(result) {
-    console.log(`PASS\n✓ ${description} (${delta}ms)`);
+    console.log(`${pass("PASS")}\n✓ ${description} (${delta}ms)`);
   } else {
-    console.log(`FAIL\n❌ ${description} (${delta}ms)`);
+    console.log(`${fail("FAIL")}\n❌ ${description} (${delta}ms)`);
   }
 }
 

@@ -1,15 +1,16 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.expect = exports.test = void 0;
+const colors_1 = require("./colors");
 function test(description, fn) {
     let now = Date.now();
     let result = fn();
     let delta = Date.now() - now;
     if (result) {
-        console.log(`PASS\n✓ ${description} (${delta}ms)`);
+        console.log(`${(0, colors_1.pass)("PASS")}\n✓ ${description} (${delta}ms)`);
     }
     else {
-        console.log(`FAIL\n❌ ${description} (${delta}ms)`);
+        console.log(`${(0, colors_1.fail)("FAIL")}\n❌ ${description} (${delta}ms)`);
     }
 }
 exports.test = test;
