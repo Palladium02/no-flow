@@ -12,7 +12,8 @@ import { exec } from 'child_process';
       testFiles.forEach((testFile) => {
         if(!testFile.endsWith("ts") && testFile.endsWith("js")) {
           exec(`node ${filepath}\\${testFile}`, (error, stdout, stderr) => {
-            console.log(testFile, " ", stdout, stderr);
+            console.log(testFile);
+            console.log(stdout, stderr);
           });
         }
       });
@@ -22,7 +23,8 @@ import { exec } from 'child_process';
       testFiles.forEach((testFile) => {
         if(!testFile.endsWith("js") && testFile.endsWith("ts")) {
           exec(`ts-node ${filepath}\\${testFile}`, (error, stdout, stderr) => {
-            console.log(testFile, " ", stdout, stderr);
+            console.log(testFile);
+            console.log(stdout, stderr);
           });
         }
       })
@@ -31,7 +33,8 @@ import { exec } from 'child_process';
       testFiles.forEach((testFile) => {
         if(!testFile.endsWith("ts") && testFile.endsWith("js")) {
           exec(`node ${filepath}\\${testFile}`, (error, stdout, stderr) => {
-            console.log(testFile, " ", stdout, stderr);
+            console.log(testFile);
+            console.log(stdout, stderr);
           });
         }
       });
